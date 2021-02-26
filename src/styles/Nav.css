@@ -1,0 +1,9 @@
+.nav-items-slider{
+    width: 100%;
+    display: flex; /*ubica las tarjetas una al lado de la otra*/
+    overflow-x: auto;
+    overscroll-behavior-x: contain; 
+    scroll-snap-type: x proximity; 
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
