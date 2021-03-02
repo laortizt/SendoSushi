@@ -27,18 +27,30 @@
 }
 .card-price{
     color: red;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .card-quantity{
     display: flex;
     color: red;
-    align-self: flex-end;
-    justify-content: right;
+    margin: 8px 0;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
 }
 
-.btn-quantity{
-    width: 20px;
-    height: 20px;
+.card-quantity-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-quantity {
+    width: 30px;
+    height: 30px; 
+}
+
+.btn-add{
+    justify-self: flex-end;
+    border-radius: 30px;
+    padding: 8px;
 }

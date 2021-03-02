@@ -5,8 +5,8 @@ const Footer = () => {
     
     return (
         <footer className="footer-container">
-            <button class="btn-icon">
-            <i class="fas fa-shopping-cart"></i>
+            <button className="btn-icon">
+            <i className="fas fa-shopping-cart"></i>
             </button>
         </footer>
     )

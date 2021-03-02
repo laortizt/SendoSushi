@@ -1,25 +1,46 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './../styles/Item.css';
 
 const Item = (props) => {
     const { name, price, ingredients, category } = props;
     
+    const [counter, setCounter] = useState(0);
+
+    const handleAdd = () => {
+        setCounter(counter +1);
+    }
+
+    const handleSubstract = () =>{
+        if (counter > 0){
+            setCounter(counter -1);
+        }
+    }
+
     return (
-        <div className={ "card-container category-" + (category || 'none') }>
-            <div class="card-body">
-                <div class="title-container">
-                    <h5 class="card-title">{name}</h5>
-                    <span class="card-price">${price}k</span>
+        <div className="card-container" data-filter={category || 'none'}>
+            <div className="card-body">
+                <div className="title-container">
+                    <h5 className="card-title">{name}</h5>
+                    <span className="card-price">${price}{}
+                    </span>
                 </div>
-                <p class="card-text"> {ingredients}</p>
+
+                <p className="card-text"> {ingredients}</p>
                 
-                <div class="card-quantity">
-                    <button class="btn-quantity">-</button>
-                    <span>0</span>
-                    <button class="btn-quantity">+</button>
+                <div className="card-quantity">
+                    <div className="card-quantity-controls">
+                        <button onClick={handleSubstract} className="btn-quantity">-</button>
+                        <span>{counter}</span>
+                        <button onClick={handleAdd} className="btn-quantity">+</button>
+                    </div>
+
+                    <div>
+                        <button className="btn-add">añadir</button>
+                    </div>
                 </div>
             </div>
         </div>
+        
     )
 };
 
