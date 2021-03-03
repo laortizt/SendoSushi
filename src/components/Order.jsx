@@ -5,7 +5,7 @@ import './../styles/Order.css';
 function Order(props) {
     const {cartItems, handleAdd, handleSubstract} = props;
 
-    const itemPrice = cartItems.reduce((a, c) => a + c.price * c.qty,0);
+    const itemPrice = cartItems.reduce((a, c) => a + c.price * c.qty * 1000, 0);
 
     let showTotal = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(itemPrice)
 
@@ -16,7 +16,7 @@ function Order(props) {
         let str ='';
         cartItems.forEach(item => {
             if (item.qty !== 0)
-                { let subst= `${item.name}: ${item.qty} precio: $${item.qty * item.price}, \r\n`; //lleva ''??
+                { let subst= `${item.name}: ${item.qty} precio: $${item.qty * item.price * 1000}, \r\n`; //lleva ''??
                     str+=subst;}
         })
 
