@@ -2,67 +2,62 @@ import React, {useState} from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Item from './components/Item'
+import Item from './components/Item';
+import ShoppingCart from './components/ShoppingCart';
+import data from './data/data';
 import './styles/App.css';
 
-const PRODUCTS = [
-  {
-    id: 1,
-    name: "Sendo",
-    price: 22,
-    ingredients: "Cangrejo, pescado blanco, queso crema, topping de langostino gratinado de queso y salsa de maracuyá.",
-    category: "sushi"
-  },
-  {
-    id: 2,
-    name: "Samurai",
-    price: 18,
-    ingredients: "Pescado blanco, aguacate, queso crema y topping de ajonjolí.",
-    category: "sushi"
-  },
-  {
-    id: 3,
-    name: "Kioto",
-    price: 15,
-    ingredients: "Cangrejo, vegetales, queso crema y topping de aguacate.",
-    category: "sushi"
-  },
-  {
-    id: 4,
-    name: "Fuji",
-    price: 22,
-    ingredients: "Tilapia apanada, aguacate y topping de langostinos tempurizados.",
-    category: "wok"
-  },
-  {
-    id: 5,
-    name: "Sushicharrón",
-    price: 29,
-    ingredients: "Magia.",
-    category: "combos"
-  },
-  {
-    id: 6,
-    name: "Sushicharrón",
-    price: 29,
-    ingredients: "Magia.",
-    category: "ceviche"
-  },
-];
 
 const App = () => {
-
+  const {PRODUCTS} = data; 
   const [category, setCategory] = useState("");
- 
+  const [showCart, setShowCart] = useState(false);
+  const [cartItems, setCartItems] = useState([]);   // Lleva los productos al carrito
+
   const selectCategory = (cat) => {
     setCategory(cat);
   }
 
+  const onSetShowCart = (show) => {
+    setShowCart(show);
+  }
+
+  const onAddToCart = (item) => {
+    const exist = cartItems.find(p => p.id ===  item.id);
+
+    if (exist) {
+      setCartItems(cartItems.map(p =>p.id === item.id ?
+        {...exist, qty: exist.qty +1} : p))
+    } else {
+      setCartItems([...cartItems, {...item, qty: 1}]);
+    }
+  }
+
+  const onRemoveFromCart = (item) => {
+    const exist = cartItems.find(p => p.id === item.id);
+
+    if (exist){  
+        if (exist.qty === 1) {
+          setCartItems(cartItems.filter(p => p.id  !== item.id));
+        } else {
+          setCartItems(cartItems.map(p => p.id === item.id ?
+            {...exist, qty: exist.qty -1} : p));
+        }
+    }    
+  }
+
   let products = PRODUCTS
-    .filter((product) => category === "" || category === product.category)
-    .map((product) =>
-      <Item key={product.id.toString()} name={product.name} price={product.price} ingredients={product.ingredients} category={product.category}/>
-    );
+  .filter((product) => category === "" || category === product.category)
+  .map((product) =>
+    <Item key={product.id.toString()}
+          product={product} 
+          name={product.name}
+          price={product.price}
+          ingredients={product.ingredients}
+          category={product.category}
+          onAddToCart={onAddToCart}
+          onRemoveFromCart={onRemoveFromCart}/>
+  );
 
   return (
     <div className="app-container">
@@ -71,7 +66,12 @@ const App = () => {
       <div className="container-products">
         {products}
       </div>
-      <Footer/>
+      <ShoppingCart cartItems={cartItems}
+        showCart={showCart}
+        onSetShowCart={onSetShowCart}
+        onAddToCart={onAddToCart}
+        onRemoveFromCart={onRemoveFromCart}/>
+      <Footer onSetShowCart={onSetShowCart}/>
     </div>
   )
 }

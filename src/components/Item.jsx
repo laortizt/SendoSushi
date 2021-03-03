@@ -2,17 +2,19 @@ import React, {useState} from 'react'
 import './../styles/Item.css';
 
 const Item = (props) => {
-    const { name, price, ingredients, category } = props;
+    const { product, name, price, ingredients, category, onAddToCart, onRemoveFromCart } = props;
     
     const [counter, setCounter] = useState(0);
 
     const handleAdd = () => {
         setCounter(counter +1);
+        onAddToCart(product)
     }
 
     const handleSubstract = () =>{
         if (counter > 0){
             setCounter(counter -1);
+            onRemoveFromCart(product)
         }
     }
 
@@ -32,10 +34,6 @@ const Item = (props) => {
                         <button onClick={handleSubstract} className="btn-quantity">-</button>
                         <span>{counter}</span>
                         <button onClick={handleAdd} className="btn-quantity">+</button>
-                    </div>
-
-                    <div>
-                        <button className="btn-add">añadir</button>
                     </div>
                 </div>
             </div>
