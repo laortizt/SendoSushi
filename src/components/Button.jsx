@@ -14,7 +14,7 @@ const Button = (props) => {
 
     return (
         <div className="item-card">
-            <a href="#" data-filter={category} onClick={selectCategory}>
+            <a href="/#" data-filter={category} onClick={selectCategory}>
                 {category}
             </a>
         </div>

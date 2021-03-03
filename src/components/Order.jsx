@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './../styles/Order.css';
 
 
 function Order(props) {
-    const {cartItems, handleAdd, handleSubstract} = props;
+    const {cartItems} = props;
 
     const itemPrice = cartItems.reduce((a, c) => a + c.price * c.qty * 1000, 0);
 
     let showTotal = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(itemPrice)
-
-    let waMsj='';
 
     //función build whatsapp url
     const getWhatsappString=()=>{

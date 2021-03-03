@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Header from "./Header";
-import data from "./../data/data";
+//import data from "./../data/data";
 import './../styles/ShoppingCart.css';
 import Order from './Order';
 
 
 function ShoppingCart(props) {
     const {showCart, onSetShowCart, cartItems, onAddToCart, onRemoveFromCart} = props;
-    const {PRODUCTS} = data;
-    const [status, setStatus] = useState(0);
-    const [products, setProducts] = useState(PRODUCTS); //duplica el array para modificar
+    //const {PRODUCTS} = data;
+    //const [status, setStatus] = useState(0);
+    //const [products, setProducts] = useState(PRODUCTS); //duplica el array para modificar
    
     // Función para añadir items al carrito
     const handleAdd = (item) => {
