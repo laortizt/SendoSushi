@@ -75,6 +75,7 @@ const App = () => {
       <Header/>
       <Nav category={category} onSelectCategory={selectCategory} />
       <div className="container-products">
+        <img className="category-picture" src={"./assets/" + category + ".jpg"} />
         {products}
       </div>
       <ShoppingCart cartItems={cartItems}

@@ -1,3 +1,14 @@
+# Creado por Luz Adriana Ortiz
+
+Está aplicación tiene como objetivo poner en práctica los conocimientos obtenidos en formación del Bootcamp 
+Programate de Educamás.
+
+
+La Empresa del establecimmiento es Sendo Sushi.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
