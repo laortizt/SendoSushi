@@ -1,9 +1,9 @@
 import React from 'react';
 import './../styles/Order.css';
-
+import OrderItem from './OrderItem';
 
 function Order(props) {
-    const {cartItems} = props;
+    const {cartItems, handleAdd, handleSubstract} = props;
 
     const itemPrice = cartItems.reduce((a, c) => a + c.price * c.qty * 1000, 0);
 
@@ -20,24 +20,10 @@ function Order(props) {
 
         str = `${str}TOTAL (Sin domicilio): ${showTotal}`;
 
-        return `http://wa.me/573058278323?text=${window.encodeURIComponent(str)}` //lleva ''??
+        return `http://wa.me/573058278323?text=${window.encodeURIComponent(str)}`;
     }
     return(
-        <div>
-            {/* <h1 className="OrderTitle">Order</h1> */}
-
-            <div className="ItemOrderContainer">
-                {cartItems.map((item)=>(
-                    // <ProductContainerTWo
-                    // key={item.id}
-                    // product={product}
-                    // onAdd={onAdd}
-                    // onRemove={onRemove}
-                    // />
-                    <span key={item.id}>{item.name}</span>
-                ))}
-            </div>
-
+        <div className="Order">
             <div className="TotalListContainer">
                 <div className="OrderListContainer">
                     {cartItems.length === 0 &&
@@ -45,14 +31,16 @@ function Order(props) {
                             Aún no hay productos en el carrito
                         </div>}
 
-                    <ul className="ShoppingList">
+                    <ul className="ShoppingList container-products">
                         {cartItems.map((item) => (
-                            <li key={item.id}>
-                                <div className="OrderButtonContainer">
-                                    {item.qty} {item.name} {item.price * item.qty}
-                                    {/* <button onClick={()=> handleAdd(item)} className="buttonOrder">+</button>;
-                                    <button onClick={()=> handleSubstract(item)} className="buttonOrder">-</button>; */}
-                                </div>
+                            <li key={item.id} className="OrderButtonContainer">
+                                <OrderItem key={item.id.toString()}
+                                    product={item} 
+                                    name={item.name}
+                                    price={item.price}
+                                    quantity={item.qty}
+                                    onAddToCart={handleAdd}
+                                    onRemoveFromCart={handleSubstract}/>
                             </li>
                         ))}
                     </ul>
@@ -61,7 +49,7 @@ function Order(props) {
                 {cartItems.length > 0 &&
                     <a href={getWhatsappString()} className="whatsappContainer" >
                         {/* <Image src={whatsapp} alt='whatsapp' className="whatsapp"/> */}
-                        <p className="Send">Enviar pedido</p>
+                        <p className="btn-send">Enviar <i className="fab fa-whatsapp"></i></p>
                     </a>}
             </div>
 

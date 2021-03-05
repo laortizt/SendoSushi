@@ -1,0 +1,54 @@
+.order-item {
+    background-color: rgb(41, 41, 41);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.order-item-body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.order-item-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.order-item-title {
+    color: red;
+    font-size: 1.2rem;
+}
+
+.order-item-price {
+    color: red;
+    font-size: 1rem;
+}
+
+.order-item-quantity {
+    display: flex;
+    color: red;
+    margin: 8px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-item-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-item-btn {
+    width: 30px;
+    height: 30px; 
+}
+
+.order-item-total {
+    justify-self: flex-end;
+    font-size: 1.3rem;
+}

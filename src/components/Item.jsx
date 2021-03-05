@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import './../styles/Item.css';
 
 const Item = (props) => {
-    const { product, name, price, ingredients, category, onAddToCart, onRemoveFromCart } = props;
+    const { product, name, price, ingredients, category, quantity, onAddToCart, onRemoveFromCart } = props;
     
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(quantity);
 
     const handleAdd = () => {
         setCounter(counter +1);
@@ -32,7 +32,7 @@ const Item = (props) => {
                 <div className="card-quantity">
                     <div className="card-quantity-controls">
                         <button onClick={handleSubstract} className="btn-quantity">-</button>
-                        <span>{counter}</span>
+                        <span>{quantity}</span>
                         <button onClick={handleAdd} className="btn-quantity">+</button>
                     </div>
                 </div>

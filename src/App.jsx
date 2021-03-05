@@ -46,18 +46,29 @@ const App = () => {
     }    
   }
 
+  const searchProductInCart = (product) => {
+    const exist = cartItems.find(i => i.id === product.id);
+
+    if (exist) {
+      return exist.qty
+    }
+
+    return 0;
+  }
+
   let products = PRODUCTS
-  .filter((product) => category === "" || category === product.category)
-  .map((product) =>
-    <Item key={product.id.toString()}
-          product={product} 
-          name={product.name}
-          price={product.price}
-          ingredients={product.ingredients}
-          category={product.category}
-          onAddToCart={onAddToCart}
-          onRemoveFromCart={onRemoveFromCart}/>
-  );
+    .filter((product) => category === "" || category === product.category)
+    .map((product) =>
+      <Item key={product.id.toString()}
+            product={product} 
+            name={product.name}
+            price={product.price}
+            ingredients={product.ingredients}
+            category={product.category}
+            quantity={searchProductInCart(product)} 
+            onAddToCart={onAddToCart}
+            onRemoveFromCart={onRemoveFromCart}/>
+    );
 
   return (
     <div className="app-container">
