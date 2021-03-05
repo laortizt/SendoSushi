@@ -6,6 +6,7 @@ import Item from './components/Item';
 import ShoppingCart from './components/ShoppingCart';
 import data from './data/data';
 import './styles/App.css';
+import sushiImg from './assets/sushi.jpg';
 
 
 const App = () => {
@@ -75,7 +76,7 @@ const App = () => {
       <Header/>
       <Nav category={category} onSelectCategory={selectCategory} />
       <div className="container-products">
-        <img className="category-picture" src={"./assets/" + category + ".jpg"} />
+        <img className="category-picture" src={sushiImg} />
         {products}
       </div>
       <ShoppingCart cartItems={cartItems}
