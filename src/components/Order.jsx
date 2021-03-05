@@ -15,12 +15,14 @@ function Order(props) {
         switch(category) {
             case "sushi":
                 return "🍣";
+            case "tempura":
+                return "🍘";
             case "combos":
-                return "🍱";
+                return "🥡";
             case "ceviche":
                 return "🍤";
             case "wok":
-                return "🥡";
+                return "🍜";
             case "bebidas":
                 return "🥤";
             default:

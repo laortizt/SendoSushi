@@ -129,7 +129,7 @@ const data = {
     {
       id: 20,
       name: "Frutos del mar",
-      price: 24000,
+      price: 24,
       ingredients: "Pescado blanco, camarón, calamar y cangrejo.",
       category: "wok"
     },
@@ -137,7 +137,7 @@ const data = {
     {
       id: 21,
       name: "Arroz teriyaki familiar",
-      price: 38000,
+      price: 38,
       ingredients: "Calamar, camarón, pollo, maiz tierno, cebollín, zanahoria y pescado blanco apanado. 4 personas.",
       category: "wok"
     },
