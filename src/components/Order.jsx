@@ -11,16 +11,33 @@ function Order(props) {
     const deliveryCostFormatted = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(deliveryCost)
     const totalCostFormatted = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(subTotal + deliveryCost)
 
+    const getEmoji = (category) => {
+        switch(category) {
+            case "sushi":
+                return "🍣";
+            case "combos":
+                return "🍱";
+            case "ceviche":
+                return "🍤";
+            case "wok":
+                return "🥡";
+            case "bebidas":
+                return "🥤";
+            default:
+                return "";                                
+        }
+    }
+
     //función build whatsapp url
     const getWhatsappString=()=>{
         let str ='';
         cartItems.forEach(item => {
             if (item.qty !== 0)
-                { let subst= `${item.name}: ${item.qty} precio: $${item.qty * item.price * 1000}, \r\n`; //lleva ''??
+                { let subst= `* ${item.name}: ${item.qty} precio: $${item.qty * item.price * 1000}, \r\n`; //lleva ''??
                     str+=subst;}
         })
 
-        str = `${str}TOTAL (Sin domicilio): ${subTotalCostFormatted}`;
+        str = `${str} TOTAL (Sin domicilio): ${totalCostFormatted}`;
 
         return `http://wa.me/573058278323?text=${window.encodeURIComponent(str)}`;
     }
@@ -37,6 +54,7 @@ function Order(props) {
                         {cartItems.map((item) => (
                             <li key={item.id} className="OrderButtonContainer">
                                 <OrderItem key={item.id.toString()}
+                                    icon={getEmoji(item.category)}
                                     product={item} 
                                     name={item.name}
                                     price={item.price * 1000}

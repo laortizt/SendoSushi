@@ -2,7 +2,7 @@ import React from 'react'
 import './../styles/OrderItem.css';
 
 const OrderItem = (props) => {
-    const { product, name, price, quantity, onAddToCart, onRemoveFromCart } = props;
+    const { product, name, price, quantity, icon, onAddToCart, onRemoveFromCart } = props;
     
     const handleAdd = () => {
         onAddToCart(product)
@@ -18,7 +18,7 @@ const OrderItem = (props) => {
         <div className="card-container order-item">
             <div className="card-body order-item-body">
                 <div className="title-container order-item-title-container">
-                    <h5 className="card-title order-item-title">{name}</h5>
+                    <h5 className="card-title order-item-title">{icon} {name}</h5>
                     <span className="card-price order-item-price">${price}</span>
                 </div>
 
