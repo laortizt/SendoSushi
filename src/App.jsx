@@ -7,6 +7,11 @@ import ShoppingCart from './components/ShoppingCart';
 import data from './data/data';
 import './styles/App.css';
 import sushiImg from './assets/sushi.jpg';
+import tempuraImg from './assets/tempura.jpg';
+import combosImg from './assets/combos.jpg';
+import cevicheImg from './assets/ceviche.png';
+import wokImg from './assets/wok.jpg';
+import bebidasImg from './assets/bebidas.png';
 
 
 const App = () => {
@@ -57,6 +62,25 @@ const App = () => {
     return 0;
   }
 
+  const getCategoryImage = (category) => { 
+    switch (category) {
+      case "sushi":
+        return <img className={"category-picture img-" + category} alt={category} src={sushiImg} />
+      case "tempura":
+        return <img className={"category-picture img-" + category} alt={category} src={tempuraImg} />
+      case "combos":
+        return <img className={"category-picture img-" + category} alt={category} src={combosImg} />
+      case "ceviche":
+        return <img className={"category-picture img-" + category} alt={category} src={cevicheImg} />
+      case "wok":
+        return <img className={"category-picture img-" + category} alt={category} src={wokImg} />
+      case "bebidas":
+        return <img className={"category-picture img-" + category} alt={category} src={bebidasImg} />
+      default:
+        return null;
+    }
+  }
+
   let products = PRODUCTS
     .filter((product) => category === "" || category === product.category)
     .map((product) =>
@@ -76,7 +100,7 @@ const App = () => {
       <Header/>
       <Nav category={category} onSelectCategory={selectCategory} />
       <div className="container-products">
-        <img className="category-picture" alt={category} src={sushiImg} />
+        {getCategoryImage(category)}
         {products}
       </div>
       <ShoppingCart cartItems={cartItems}
