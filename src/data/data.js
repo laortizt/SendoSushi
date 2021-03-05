@@ -144,7 +144,7 @@ const data = {
     {
       id: 22,
       name: "Té hatsu",
-      price: 5000,
+      price: 5,
       category: "bebidas"
     },
     {
