@@ -5,9 +5,11 @@ import OrderItem from './OrderItem';
 function Order(props) {
     const {cartItems, handleAdd, handleSubstract} = props;
 
-    const itemPrice = cartItems.reduce((a, c) => a + c.price * c.qty * 1000, 0);
-
-    let showTotal = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(itemPrice)
+    const deliveryCost = 3000;
+    const subTotal = cartItems.reduce((a, c) => a + c.price * c.qty * 1000, 0);
+    const subTotalCostFormatted = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(subTotal)
+    const deliveryCostFormatted = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(deliveryCost)
+    const totalCostFormatted = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 2})).format(subTotal + deliveryCost)
 
     //función build whatsapp url
     const getWhatsappString=()=>{
@@ -18,7 +20,7 @@ function Order(props) {
                     str+=subst;}
         })
 
-        str = `${str}TOTAL (Sin domicilio): ${showTotal}`;
+        str = `${str}TOTAL (Sin domicilio): ${subTotalCostFormatted}`;
 
         return `http://wa.me/573058278323?text=${window.encodeURIComponent(str)}`;
     }
@@ -37,7 +39,7 @@ function Order(props) {
                                 <OrderItem key={item.id.toString()}
                                     product={item} 
                                     name={item.name}
-                                    price={item.price}
+                                    price={item.price * 1000}
                                     quantity={item.qty}
                                     onAddToCart={handleAdd}
                                     onRemoveFromCart={handleSubstract}/>
@@ -47,10 +49,27 @@ function Order(props) {
                 </div>
                 
                 {cartItems.length > 0 &&
-                    <a href={getWhatsappString()} className="whatsappContainer" >
-                        {/* <Image src={whatsapp} alt='whatsapp' className="whatsapp"/> */}
-                        <p className="btn-send">Enviar <i className="fab fa-whatsapp"></i></p>
-                    </a>}
+                    <div>
+                        <div className="order-cost-container">
+                            <div className="order-cost order-subtotal">
+                                <span>Subtotal:</span>
+                                <span>{subTotalCostFormatted}</span>
+                            </div>
+                            <div className="order-cost order-delivery">
+                                <span>Domicilio:</span>
+                                <span>{deliveryCostFormatted}</span>
+                            </div>
+                            <div className="order-cost order-total">
+                                <span>Total:</span>
+                                <span>{totalCostFormatted}</span>
+                            </div>
+                        </div>
+
+                        <a href={getWhatsappString()} className="whatsappContainer" >
+                            {/* <Image src={whatsapp} alt='whatsapp' className="whatsapp"/> */}
+                            <p className="btn-send">Enviar <i className="fab fa-whatsapp"></i></p>
+                        </a>                        
+                    </div>}
             </div>
 
             <div className="ComeBackContainer" onClick={props.Sushi}></div>

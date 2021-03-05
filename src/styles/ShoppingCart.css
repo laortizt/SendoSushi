@@ -10,6 +10,15 @@
     padding: 16px;
 }
 
+.shopping-cart .logo {
+    width: 50%;
+    height: auto;
+}
+
+.shopping-cart .logo img {
+    width: 100%;
+}
+
 .shopping-cart--hidden {
     display: none;
 }

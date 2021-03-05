@@ -1,4 +1,4 @@
-.nav-items-slider{
+.nav-items-slider {
     width: 100%;
     display: flex; /*ubica las tarjetas una al lado de la otra*/
     overflow-x: auto;

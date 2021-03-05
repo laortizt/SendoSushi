@@ -76,3 +76,28 @@
     border-radius: 30px;
     padding: 8px;
 }
+
+.whatsappContainer {
+    text-decoration: none;
+}
+
+.whatsappContainer:visited {
+    color: white;
+}
+
+.order-cost-container {
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.order-cost {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+.order-total {
+    font-size: 1.4rem;
+}

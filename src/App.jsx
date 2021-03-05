@@ -10,7 +10,7 @@ import './styles/App.css';
 
 const App = () => {
   const {PRODUCTS} = data; 
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("sushi");
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);   // Lleva los productos al carrito
 
@@ -73,7 +73,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Header/>
-      <Nav onSelectCategory={selectCategory} />
+      <Nav category={category} onSelectCategory={selectCategory} />
       <div className="container-products">
         {products}
       </div>

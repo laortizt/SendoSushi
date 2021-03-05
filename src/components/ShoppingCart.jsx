@@ -29,7 +29,7 @@ function ShoppingCart(props) {
 
                 <Header/>
 
-                <div className="my-order">Mi pedido</div>
+                <div className="my-order">Tu pedido</div>
 
                 <Order cartItems={cartItems} 
                     handleAdd={handleAdd}
