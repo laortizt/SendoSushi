@@ -47,10 +47,16 @@
 .btn-quantity {
     width: 30px;
     height: 30px; 
+    border-radius: 15px;
+    border-color: inherit;
+    border-style: none;
 }
 
 .btn-add{
     justify-self: flex-end;
     border-radius: 30px;
     padding: 8px;
+    text-decoration: none;
+  
+    
 }

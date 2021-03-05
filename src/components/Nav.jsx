@@ -10,7 +10,7 @@ const Nav = (props) => {
             <Button category="sushi" active={category === "sushi"} onSelectCategory={onSelectCategory} />
             <Button category="combos" active={category === "combos"} onSelectCategory={onSelectCategory}/>
             <Button category="ceviche" active={category === "ceviche"} onSelectCategory={onSelectCategory}/>
-            <Button category="wok" active={category === "woksushi"} onSelectCategory={onSelectCategory}/>
+            <Button category="wok" active={category === "wok"} onSelectCategory={onSelectCategory}/>
             <Button category="bebidas" active={category === "bebidas"} onSelectCategory={onSelectCategory}/>
         </nav>
     )

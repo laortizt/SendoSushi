@@ -33,11 +33,11 @@ function Order(props) {
         let str ='';
         cartItems.forEach(item => {
             if (item.qty !== 0)
-                { let subst= `* ${item.name}: ${item.qty} precio: $${item.qty * item.price * 1000}, \r\n`; //lleva ''??
+                { let subst= `* ${item.name}: ${item.qty} precio: $${item.qty * item.price * 1000}, \r\n`;
                     str+=subst;}
         })
 
-        str = `${str} TOTAL (Sin domicilio): ${totalCostFormatted}`;
+        str = `${str} TOTAL: ${totalCostFormatted}`;
 
         return `http://wa.me/573058278323?text=${window.encodeURIComponent(str)}`;
     }
