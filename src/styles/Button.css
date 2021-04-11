@@ -7,7 +7,7 @@
     outline: none;
     color: black;
     margin: 4px;
-    padding: 8px;
+    padding: 8px 16px;
 }
 
 .item-card a{
@@ -21,6 +21,7 @@
 .item-card:hover {
     background: red;
     color: white;
+    cursor: pointer;
 }
 
 .item-card.active {

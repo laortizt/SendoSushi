@@ -13,8 +13,8 @@ const Button = (props) => {
     }
 
     return (
-        <div className={"item-card " + (active ? "active" : "")}>
-            <a href="/#" data-filter={category} onClick={selectCategory}>
+        <div className={"item-card " + (active ? "active" : "")} onClick={selectCategory}>
+            <a href="/#" data-filter={category}>
                 {category}
             </a>
         </div>

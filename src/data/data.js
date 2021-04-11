@@ -39,21 +39,21 @@ const data = {
       id: 6,
       name: "Premier",
       price: 22,
-      ingredients: "Cangrejo, queso crema,aguacate y topping de mango, 10 piezas.",
+      ingredients: "Cangrejo, queso crema, aguacate y topping de mango, 10 piezas.",
       category: "sushi"
     },
     {
       id: 7,
       name: "Salmón premium",
       price: 24,
-      ingredients: "Cangrejo, queso crema,aguacate y topping de salmón, 10 piezas.",
+      ingredients: "Cangrejo, queso crema, aguacate y topping de salmón, 10 piezas.",
       category: "sushi"
     },
     {
       id: 8,
       name: "Rainbow",
       price: 22,
-      ingredients: "Cangrejo, queso crema,aguacate y topping de salmón, 10 piezas.",
+      ingredients: "Cangrejo, queso crema, aguacate y topping de salmón, 10 piezas.",
       category: "sushi"
     },
     {
@@ -184,8 +184,6 @@ const data = {
       category: "bebidas"
     },
   ]
-
-  
 };
 
 export default data;

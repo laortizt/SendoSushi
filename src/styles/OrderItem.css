@@ -51,4 +51,6 @@
 .order-item-total {
     justify-self: flex-end;
     font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
 }

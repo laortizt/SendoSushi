@@ -8,7 +8,7 @@ import data from './data/data';
 import './styles/App.css';
 import sushiImg from './assets/sushi.jpg';
 import tempuraImg from './assets/tempura.jpg';
-import combosImg from './assets/combos.jpg';
+import combosImg from './assets/combos.png';
 import cevicheImg from './assets/ceviche.png';
 import wokImg from './assets/wok.jpg';
 import bebidasImg from './assets/bebidas.png';

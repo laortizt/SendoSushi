@@ -11,7 +11,7 @@
 }
 
 .shopping-cart .logo {
-    width: 50%;
+    width: 45%;
     height: auto;
 }
 
@@ -36,12 +36,20 @@
     border-radius: 30px;
     text-decoration: none;
     outline: none;
-    background-color: red;
+    background-color: none;
+    color: white;
     text-align: center;
     align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: red;
+    color: white;
 }
 
 .my-order{
     color: red;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
 }

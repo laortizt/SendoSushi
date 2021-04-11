@@ -10,16 +10,15 @@
     bottom: 0;
 }
 
-.btn-icon{
-   
+.btn-icon {
     padding: 8px;
     background: none;
     color: white;
     border-radius: 50px;
     border: solid;
-    
+    cursor: pointer;
 }
 
 .btn-icon:hover, .btn-icon:focus {
-    background: rgba(67, 67, 67, 0.5);
+    color: rgba(255, 0, 0, 0.9);
 }

@@ -24,17 +24,19 @@
 .card-text{
     color: white;
     font-size: 1rem;
+    margin-bottom: 8px;
 }
 .card-price{
     color: red;
     font-size: 1.2rem;
 }
-.card-quantity{
+.card-quantity {
     display: flex;
     color: red;
     margin: 8px 0;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
 }
 
 .card-quantity-controls {
@@ -50,6 +52,12 @@
     border-radius: 15px;
     border-color: inherit;
     border-style: none;
+    cursor: pointer;
+}
+
+.btn-quantity:hover {
+    background: red;
+    color: white;
 }
 
 .btn-add{
@@ -57,6 +65,4 @@
     border-radius: 30px;
     padding: 8px;
     text-decoration: none;
-  
-    
 }
