@@ -10,7 +10,7 @@ const data = {
     {
       id: 2,
       name: "Samurai",
-      price: 18,
+      price: 17,
       ingredients: "Pescado blanco, aguacate, queso crema y topping de ajonjolí, 10 piezas.",
       category: "sushi"
     },
@@ -25,164 +25,191 @@ const data = {
       id: 4,
       name: "Fuji",
       price: 22,
-      ingredients: "Tilapia apanada, aguacate y topping de langostinos tempurizados, 10 piezas.",
+      ingredients: "Tilapia apanada, aguacate y topping de langostinos rebozados, 10 piezas.",
       category: "sushi"
     },
     {
       id: 5,
-      name: "Tentación",
-      price: 23,
-      ingredients: "Salmón, cangrejo, queso crema y topping de plátano maduro, 10 piezas.",
+      name: "Premier",
+      price: 22,
+      ingredients: "Cangrejo, queso crema, langostinos y topping de mango, 10 piezas.",
       category: "sushi"
     },
     {
       id: 6,
-      name: "Premier",
-      price: 22,
-      ingredients: "Cangrejo, queso crema, aguacate y topping de mango, 10 piezas.",
+      name: "Benji",
+      price: 15,
+      ingredients: "Espárragos, vegetales, aguacate y topping de mango, 10 piezas.",
       category: "sushi"
     },
     {
       id: 7,
-      name: "Salmón premium",
-      price: 24,
-      ingredients: "Cangrejo, queso crema, aguacate y topping de salmón, 10 piezas.",
+      name: "Rainbow",
+      price: 22,
+      ingredients: "Cangrejo, pepino, aguacate, topping de pescado y massago, 10 piezas.",
       category: "sushi"
     },
     {
       id: 8,
-      name: "Rainbow",
-      price: 22,
-      ingredients: "Cangrejo, queso crema, aguacate y topping de salmón, 10 piezas.",
+      name: "Alaska",
+      price: 21,
+      ingredients: "Salmón, aguacate, queso crema, topping de salmón y guacame, 10 piezas.",
+      category: "sushi"
+    },
+    {
+      id: 9,
+      name: "Tuna Roll",
+      price: 18,
+      ingredients: "Langostino, aguacate, queso crema, topping de atún, 10 piezas.",
       category: "sushi"
     },
     {
       id: 10,
+      name: "California Roll",
+      price: 17,
+      ingredients: "Cangrejo, pepino, aguacate, topping de massago y ajonjolí, 10 piezas.",
+      category: "sushi"
+    },
+    {
+      id: 11,
+      name: "Ojo de tigre",
+      price: 26,
+      ingredients: "Cangrejo, atún, salmón, aguacate, queso crema, topping de massago y ajonjolí, 10 piezas.",
+      category: "sushi"
+    },
+    {
+      id: 12,
+      name: "Ceviche",
+      price: 22,
+      ingredients: "Cangrejo, aguacate, queso crema y topping de ceviche, 10 piezas.",
+      category: "sushi"
+    },
+    {
+      id: 13,
       name: "Tokio",
       price: 21,
       ingredients: "Salmón apanado, langostinos, aguacate y queso crema, 12 piezas.",
       category: "tempura"
     },
     {
-      id: 11,
+      id: 14,
       name: "Tiger",
       price: 20,
-      ingredients: " Cangrejo, esparragos en coco, aguacate y queso crema, 12 piezas.",
+      ingredients: "Cangrejo, espárragos, aguacate y queso crema, 12 piezas.",
       category: "tempura"
     },
     {
-      id: 12,
+      id: 15,
       name: "Coco Bongo",
       price: 25,
-      ingredients: "Langostinos tempurizados en coco, aguacate y queso crema ¡Todo apanado en cereal! 12 piezas.",
+      ingredients: "Langostinos tempurizados con coco, aguacate y queso crema ¡Todo apanado en cereal!, 12 piezas.",
       category: "tempura"
     },
     {
-      id: 13,
+      id: 16,
       name: "Rock and Roll",
       price: 20,
-      ingredients: "Tilapia, queso cremsa y aguacate, 12 piezas.",
+      ingredients: "Pescado blanco, vegetales y aguacate, 12 piezas.",
       category: "tempura"
     },
     {
-      id: 14,
+      id: 17,
       name: "Sensei",
       price: 24,
       ingredients: "Salmón, atún, pescado blanco y queso crema, 12 piezas.",
       category: "tempura"
     },
-    {
-      id: 15,
-      name: "Tropical",
-      price: 18,
-      ingredients: "Plátano maduro queso crema y cangrejo, 12 piezas.",
-      category: "tempura"
-    },
-    {
-      id: 16,
-      name: "22 piezas",
-      price: 40,
-      ingredients: "2 Roll diferentes.",
-      category: "combos"
-    },
-    {
-      id: 17,
-      name: "32 piezas",
-      price: 60,
-      ingredients: "3 Roll diferentes.",
-      category: "combos"
-    },
-    {
-      id: 18,
-      name: "Ceviche sendo",
-      price: 20,
-      ingredients: "Camarón, pescado blanco, pulpo, cebolla morada, leche de tigre, pimentón, mango viche y apio.",
-      category: "ceviche"
-    },
+    // {
+    //   id: 18,
+    //   name: "Tropical",
+    //   price: 18,
+    //   ingredients: "Plátano maduro queso crema y cangrejo, 12 piezas.",
+    //   category: "tempura"
+    // },
     {
       id: 19,
-      name: "Base de vegetales",
-      price: 16.7,
-      ingredients: "Cebolla, zanahoría, zuquini, pimentón, y raices chinas.",
-      category: "wok"
+      name: "20 piezas",
+      price: 40,
+      ingredients: "2 rolls. Máximo 1 de la categoría tempurizado",
+      category: "combos"
     },
     {
       id: 20,
-      name: "Frutos del mar",
-      price: 24,
-      ingredients: "Pescado blanco, camarón, calamar y cangrejo.",
-      category: "wok"
+      name: "30 piezas",
+      price: 60,
+      ingredients: "3 Roll. Máximo 1 de la categoría tempurizado. Máximo 2 rolls iguales",
+      category: "combos"
     },
-    
-    {
-      id: 21,
-      name: "Arroz teriyaki familiar",
-      price: 38,
-      ingredients: "Calamar, camarón, pollo, maiz tierno, cebollín, zanahoria y pescado blanco apanado. 4 personas.",
-      category: "wok"
-    },
+    // {
+    //   id: 21,
+    //   name: "Ceviche sendo",
+    //   price: 20,
+    //   ingredients: "Camarón, pescado blanco, pulpo, cebolla morada, leche de tigre, pimentón, mango viche y apio.",
+    //   category: "ceviche"
+    // },
     {
       id: 22,
+      name: "Base de vegetales",
+      price: 16.9,
+      ingredients: "Cebolla, zanahoria, zuquini, pimentón, y raices chinas. Elige un carbohidrato y una proteína.",
+      category: "wok"
+    },
+    {
+      id: 23,
+      name: "Frutos del mar",
+      price: 24,
+      ingredients: "Pescado blanco, camarón, pulpo, calamar y cangrejo.",
+      category: "wok"
+    },
+    // {
+    //   id: 24,
+    //   name: "Arroz teriyaki familiar",
+    //   price: 38,
+    //   ingredients: "Calamar, camarón, pollo, maiz tierno, cebollín, zanahoria y pescado blanco apanado. 4 personas.",
+    //   category: "wok"
+    // },
+    {
+      id: 25,
       name: "Té hatsu",
       price: 5,
       category: "bebidas"
     },
     {
-      id: 23,
+      id: 26,
       name: "Coca-cola 400 ml",
       price: 2.5,
       category: "bebidas"
     },
-    {
-      id: 24,
-      name: "Limonada natural",
-      price: 4,
-      category: "bebidas"
-    },
-    {
-      id: 25,
-      name: "Limonada de Hierbabuena",
-      price: 5,
-      category: "bebidas"
-    },
-    {
-      id: 26,
-      name: "Limonada de Cereza",
-      price: 5,
-      category: "bebidas"
-    },
-    {
-      id: 27,
-      name: "Jugo natural en agua",
-      price: 4,
-      category: "bebidas"
-    },
-    {
-      id: 28,
-      name: "Jugo natural en leche",
-      price: 5,
-      category: "bebidas"
-    },
+    // {
+    //   id: 27,
+    //   name: "Limonada natural",
+    //   price: 4,
+    //   category: "bebidas"
+    // },
+    // {
+    //   id: 28,
+    //   name: "Limonada de Hierbabuena",
+    //   price: 5,
+    //   category: "bebidas"
+    // },
+    // {
+    //   id: 29,
+    //   name: "Limonada de Cereza",
+    //   price: 5,
+    //   category: "bebidas"
+    // },
+    // {
+    //   id: 30,
+    //   name: "Jugo natural en agua",
+    //   price: 4,
+    //   category: "bebidas"
+    // },
+    // {
+    //   id: 31,
+    //   name: "Jugo natural en leche",
+    //   price: 5,
+    //   category: "bebidas"
+    // },
   ]
 };
 
