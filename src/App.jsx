@@ -89,6 +89,7 @@ const App = () => {
             name={product.name}
             price={product.price}
             ingredients={product.ingredients}
+            subitems={product.subitems}
             category={product.category}
             quantity={searchProductInCart(product)} 
             onAddToCart={onAddToCart}

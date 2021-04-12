@@ -1,0 +1,16 @@
+.option-set {
+    margin: 16px;
+}
+
+.option-set-name {
+    color: red;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.option-set-options {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}

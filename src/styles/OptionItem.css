@@ -1,0 +1,14 @@
+.option-item {
+    flex: 1;
+    flex-basis: 48%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media screen and (min-width: 540px) {
+    .option-item {
+        flex-basis: 30%;
+        max-width: 33%;
+    }
+}

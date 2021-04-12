@@ -131,7 +131,89 @@ const data = {
       name: "20 piezas",
       price: 40,
       ingredients: "2 rolls. Máximo 1 de la categoría tempurizado",
-      category: "combos"
+      category: "combos",
+      subitems: [
+        {
+          id: 1,
+          name: 'Sushi 10 Makis',
+          options: [
+            {
+              id: 1,
+              name: 'Sendo'
+            },
+            {
+              id: 2,
+              name: 'Samurai'
+            },
+            {
+              id: 3,
+              name: 'Kioto'
+            },
+            {
+              id: 4,
+              name: 'Fuji'
+            },
+            {
+              id: 5,
+              name: 'Premier'
+            },
+            {
+              id: 6,
+              name: 'Benji'
+            },
+            {
+              id: 7,
+              name: 'Rainbow'
+            },
+            {
+              id: 8,
+              name: 'Alaska'
+            },
+            {
+              id: 9,
+              name: 'Tuna Roll'
+            },
+            {
+              id: 10,
+              name: 'California Roll'
+            },
+            {
+              id: 11,
+              name: 'Ojo de tigre'
+            },
+            {
+              id: 12,
+              name: 'Ceviche'
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: 'Sushi Tempura',
+          options: [
+            {
+              id: 1,
+              name: 'Tokio'
+            },
+            {
+              id: 2,
+              name: 'Tiger'
+            },
+            {
+              id: 3,
+              name: 'Coco Bongo'
+            },
+            {
+              id: 4,
+              name: 'Rock and Roll'
+            },
+            {
+              id: 5,
+              name: 'Sensei'
+            }
+          ]
+        }
+      ]
     },
     {
       id: 20,
@@ -152,7 +234,49 @@ const data = {
       name: "Base de vegetales",
       price: 16.9,
       ingredients: "Cebolla, zanahoria, zuquini, pimentón, y raices chinas. Elige un carbohidrato y una proteína.",
-      category: "wok"
+      category: "wok",
+      subitems: [
+        {
+          id: 1,
+          name: 'Carbohidrato',
+          options: [
+            {
+              id: 1,
+              name: 'Arroz'
+            },
+            {
+              id: 2,
+              name: 'Pasta de arroz'
+            },
+            {
+              id: 3,
+              name: 'Pasta de huevo'
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: 'Proteína',
+          options: [
+            {
+              id: 1,
+              name: 'Res'
+            },
+            {
+              id: 2,
+              name: 'Pollo'
+            },
+            {
+              id: 3,
+              name: 'Cerdo'
+            },
+            {
+              id: 4,
+              name: 'Mix (Res, pollo y cerdo)'
+            }
+          ]
+        }
+      ]
     },
     {
       id: 23,
